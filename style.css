@@ -1,0 +1,219 @@
+@font-face {
+  font-family: "hanken grtesk";
+  src: url(/assets/fonts/static/HankenGrotesk-Medium.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "hanken grtesk";
+  src: url(/assets/fonts/static/HankenGrotesk-Bold.ttf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: "hanken grtesk";
+  src: url(/assets/fonts/static/HankenGrotesk-ExtraBold.ttf);
+  font-weight: 800;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  font-size: 1.125rem;
+  font-family: "hanken grtesk";
+}
+
+html {
+  --light-red: hsl(0, 100%, 67%);
+  --orangey-yellow: hsl(39, 100%, 56%);
+  --green-teal: hsl(166, 100%, 37%);
+  --cobalt-blue: hsl(234, 85%, 45%);
+  --light-slate-blue-gr: #7857ff;
+  --light-royal-blue-gr: #2e2be9;
+  --violet-blue: #4e21ca;
+  --persian-blue: #2421ca00;
+  --white: hsl(0, 0%, 100%);
+  --pale-blue: hsl(221, 100%, 96%);
+  --light-lavender: hsla(241, 100%, 89%, 0.829);
+  --dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 375px;
+  background-color: white;
+}
+.result-section {
+  padding: 1em;
+  background: linear-gradient(
+    180deg,
+    rgba(120, 87, 255, 1) 0.5%,
+    rgba(46, 43, 233, 1) 86%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+
+.result-section h3 {
+  color: var(--light-lavender);
+  margin-top: 8px;
+  margin-bottom: 1.4rem;
+  font-size: 1.125rem;
+}
+
+.circle-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 137px;
+  height: 137px;
+  border-radius: 50%;
+  background: linear-gradient(
+    180deg,
+    rgba(78, 33, 202, 0.801) 12%,
+    rgba(36, 33, 202, 0) 95%
+  );
+  margin-bottom: 1.5rem;
+}
+
+.digit-76 {
+  font-size: 3.2rem;
+  color: var(--pale-blue);
+  font-weight: 900;
+}
+
+.of-100 {
+  font-size: 1rem;
+  color: hsl(246, 100%, 73%);
+}
+
+.result-section h4 {
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--pale-blue);
+  margin-bottom: 0.8rem;
+  font-size: 24px;
+}
+
+.result-section p {
+  color: var(--light-lavender);
+  font-size: 1rem;
+  width: 85%;
+  margin-bottom: 1.125rem;
+}
+
+/* SUMMARY SECTION CSS */
+
+.summary-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 1.5em;
+}
+.summary-section > h4 {
+  align-self: flex-start;
+  margin-bottom: 2rem;
+  color: var(--dark-gray-blue);
+}
+
+.stat-div {
+  display: flex;
+  justify-content: space-between;
+  width: 275px;
+  margin-bottom: 2rem;
+}
+
+.stat-div img {
+  width: 20px;
+  height: 20px;
+}
+
+.img-feature-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+
+  font-weight: bold;
+}
+.stat-100-div {
+  display: flex;
+}
+.one-hundred {
+  color: hsl(285, 6%, 65%);
+  font-weight: 500;
+}
+
+.stat-100-div > p {
+  color: var(--dark-gray-blue);
+  font-weight: 700;
+}
+
+[src="assets/images/icon-reaction.svg"] ~ h5 {
+  color: hsl(0, 100%, 73%);
+}
+[src="assets/images/icon-memory.svg"] ~ h5 {
+  color: hsl(40, 100%, 72%);
+}
+[src="assets/images/icon-verbal.svg"] ~ h5 {
+  color: hsl(166, 92%, 39%);
+}
+[src="assets/images/icon-visual.svg"] ~ h5 {
+  color: hsl(234, 85%, 45%);
+}
+
+button {
+  background-color: var(--dark-gray-blue);
+  color: var(--pale-blue);
+  border: none;
+  outline: none;
+  padding: 1.2em 2rem;
+  width: 100%;
+  border-radius: 99px;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+button:hover {
+    background: linear-gradient(
+        180deg,
+        rgb(121, 87, 255) 0.5%,
+        rgba(46, 43, 233, 1) 86%
+      );
+}
+
+/* media query style  */
+
+@media (min-width: 820px) {
+  main {
+    flex-direction: row;
+    max-width: 700px;
+  }
+  .result-section {
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+  }
+  .summary-section > h4 {
+    margin-top: 2.3rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+    
+  }
+}
